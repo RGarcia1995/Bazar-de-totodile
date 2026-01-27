@@ -61,6 +61,78 @@
   border-radius: 10px;
 }
 
+/* TARJETA */
+.producto {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* CAJA DE IMAGEN (MISMO TAMAÑO SIEMPRE) */
+.img-box {
+  width: 100%;
+  height: 220px;              /* 👈 TODAS IGUALES */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;        /* 👈 NO SE DEFORMA */
+}
+
+/* TEXTO */
+.producto h3 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+/* BOTONES */
+.acciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.comprar {
+  background: #3483fa; /* estilo Mercado Libre */
+  color: white;
+}
+
+.btn.info {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  font-weight: bold;
+}
+
 
 
 

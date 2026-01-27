@@ -135,6 +135,50 @@ body {
   }
 }
 
+/* ===== NAVBAR EFECTO PRO ===== */
+.navbar {
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* TEXTO */
+.logo span {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* LINKS */
+.menu a {
+  color: #e5e7eb;
+  position: relative;
+  padding: 6px 4px;
+  transition: color 0.3s ease;
+}
+
+/* LINEA ANIMADA */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover {
+  color: #38bdf8;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+
 
 
 

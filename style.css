@@ -72,6 +72,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
 
 /* CAJA DE IMAGEN (MISMO TAMAÑO SIEMPRE) */
 .img-box {
@@ -132,6 +137,7 @@
   transform: translateY(-2px);
   font-weight: bold;
 }
+
 
 
 

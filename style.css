@@ -38,15 +38,29 @@
 }
 
 /* ===== MENU ===== */
-.menu {
-  display: flex;
-  gap: 20px;
-}
 
 .menu a {
   color: white;
   text-decoration: none;
 }
+
+.menu {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;          /* 👈 permite desplazamiento */
+  white-space: nowrap;       /* 👈 evita que bajen de línea */
+  max-width: 100%;
+}
+
+.menu::-webkit-scrollbar {
+  height: 6px;
+}
+
+.menu::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 10px;
+}
+
 
 
 

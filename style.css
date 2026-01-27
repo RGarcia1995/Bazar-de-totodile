@@ -14,17 +14,22 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #fff;
+  color: white;
   font-size: 20px;
   font-weight: bold;
 }
 
 .logo img {
-  width: 70px;
+  width: 80px;
   height: auto;
-  position: static; /* quitamos desplazamientos raros */
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.35));
+  display: block;
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
 /* ===== MENÚ ===== */
@@ -67,4 +72,5 @@
     justify-content: center;
   }
 }
+
 

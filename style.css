@@ -1,19 +1,17 @@
-/* ===== HEADER / NAVBAR ===== */
+/* ===== HEADER ===== */
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: #0f172a;
   padding: 16px 32px;
 }
 
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -23,54 +21,32 @@
   width: 80px;
   height: auto;
   display: block;
-  animation: floatLogo 3s ease-in-out infinite;
+  animation: logoFloat 2.5s ease-in-out infinite;
 }
 
-@keyframes floatLogo {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+/* ===== ANIMACIÓN ===== */
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-/* ===== MENÚ ===== */
+/* ===== MENU ===== */
 .menu {
   display: flex;
   gap: 20px;
 }
 
 .menu a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  position: relative;
 }
 
-.menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #38bdf8;
-  transition: width 0.3s ease;
-}
-
-.menu a:hover::after {
-  width: 100%;
-}
-
-/* ===== RESPONSIVE HEADER ===== */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
 
 

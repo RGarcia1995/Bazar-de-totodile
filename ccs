@@ -1,0 +1,83 @@
+/* ===== DESCRIPCIÓN ===== */
+.descripcion {
+  background: #f8fafc;
+  text-align: center;
+}
+
+.descripcion p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* ===== PRODUCTOS GRID ===== */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.producto {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.precio {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ===== BOTONES ===== */
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.comprar {
+  background: #38bdf8;
+  color: white;
+}
+
+.btn.info {
+  background: #e5e7eb;
+  color: #0f172a;
+}
+
+.btn:hover {
+  font-weight: bold;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.logo img {
+  width: 120px;              /* 👈 MÁS GRANDE */
+  position: relative;
+  top: -45px;                /* 👈 SOBRESALE MÁS */
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 14px 20px rgba(0,0,0,0.35));
+}

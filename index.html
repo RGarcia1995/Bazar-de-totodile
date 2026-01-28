@@ -3,28 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Mi Tienda</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-  const telefonoWhatsApp = "5219841383115";
-
-  document.querySelectorAll(".btn.comprar").forEach(boton => {
-    boton.addEventListener("click", () => {
-      const nombre = boton.getAttribute("data-nombre");
-      const precio = boton.getAttribute("data-precio");
-
-      const mensaje = `Hola 👋, estoy interesado en el producto:\n\n📦 ${nombre}\n💰 Precio: ${precio}`;
-
-      const url = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-
-      window.open(url, "_blank");
-    });
-  });
-</script>
-
-
 <body>
 
 <header class="navbar">
@@ -51,7 +31,6 @@
 <section id="productos" class="seccion productos">
   <h2>Productos</h2>
 
-  <!-- GRID -->
   <div class="productos-grid">
 
     <!-- PRODUCTO -->
@@ -59,53 +38,50 @@
       <div class="img-box">
         <img src="img/kitesnorquel.jpg" alt="Kit de Esnórquel">
       </div>
+
       <h3>Kit de Esnórquel Completo</h3>
       <p class="precio">$650 MXN</p>
 
-   <div class="acciones">
-  <button
-    class="btn comprar"
-    data-nombre="Kit de Esnórquel Completo"
-    data-precio="$650 MXN"
-  >
-    Comprar
-  </button>
-
-  <button class="btn info">
-    Información
-  </button>
-</div>
-
-</div>
-      </div>
-    </div>
-
-    <!-- PRODUCTO -->
-    <div class="producto">
-      <div class="img-box">
-        <img src="https://via.placeholder.com/300" alt="Producto 2">
-      </div>
-      <h3>Producto Ejemplo</h3>
-      <p class="precio">$500 MXN</p>
-
       <div class="acciones">
-        <button class="btn comprar">Comprar</button>
-        <button class="btn info">Información</button>
+        <button
+          class="btn comprar"
+          data-nombre="Kit de Esnórquel Completo"
+          data-precio="$650 MXN"
+        >
+          Comprar
+        </button>
+
+        <button class="btn info">
+          Información
+        </button>
       </div>
     </div>
 
   </div>
 </section>
 
+<!-- SCRIPT WHATSAPP -->
+<script>
+  const telefonoWhatsApp = "5219841383115";
+
+  document.querySelectorAll(".btn.comprar").forEach(boton => {
+    boton.addEventListener("click", () => {
+      const nombre = boton.dataset.nombre;
+      const precio = boton.dataset.precio;
+
+      const mensaje =
+        `Hola 👋, estoy interesado en el producto:\n\n` +
+        `📦 ${nombre}\n` +
+        `💰 Precio: ${precio}`;
+
+      const url = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 

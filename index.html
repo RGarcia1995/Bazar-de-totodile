@@ -7,6 +7,24 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+<script>
+  const telefonoWhatsApp = "5219841383115";
+
+  document.querySelectorAll(".btn.comprar").forEach(boton => {
+    boton.addEventListener("click", () => {
+      const nombre = boton.getAttribute("data-nombre");
+      const precio = boton.getAttribute("data-precio");
+
+      const mensaje = `Hola 👋, estoy interesado en el producto:\n\n📦 ${nombre}\n💰 Precio: ${precio}`;
+
+      const url = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+
 <body>
 
 <header class="navbar">
@@ -45,8 +63,12 @@
       <p class="precio">$650 MXN</p>
 
       <div class="acciones">
-        <button class="btn comprar">Comprar</button>
-        <button class="btn info">Información</button>
+         Comprar
+    </button>
+
+    <button class="btn info">Información</button>
+  </div>
+</div>
       </div>
     </div>
 
@@ -69,6 +91,7 @@
 
 </body>
 </html>
+
 
 
 
